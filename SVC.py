@@ -9,7 +9,7 @@ from joblib import dump
 class ClassicalModel:
     __slots__ = "dataset_folder", "training_data", "testing_data", "X_train", "X_test", "Y_train", "Y_test", "model"
 
-    def __init__(self, dataset_folder, training_model=SVC()):
+    def __init__(self, dataset_folder, training_model=SVC(kernel='rbf')):
         """
         initialize dataset folder, parameters and read the dataset
         :param dataset_folder: path to dataset folder
